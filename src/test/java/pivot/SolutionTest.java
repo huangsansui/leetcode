@@ -1,5 +1,7 @@
+package pivot;
 
 import org.junit.Test;
+import pivot.Solution;
 
 /**
  * Function:
