@@ -9,9 +9,9 @@ package util;
  */
 public class ListNode {
 
-    int val;
+    public int val;
 
-    ListNode next;
+    public ListNode next;
 
     public ListNode(int val) {
         this.val = val;
