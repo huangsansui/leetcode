@@ -9,6 +9,10 @@ public class LeetCode26 {
 
     /**
      * 106ms O(n^2)
+     * 暴力解决，基本思路就是碰到相同的就把该元素移除
+     * 把后面的元素全都往前挪一位
+     * 从头遍历，碰到相同的就再次遍历把后面元素往前挪
+     * m用来标记最开始数组最后一个的位置
      * @param nums
      * @return
      */
@@ -18,6 +22,7 @@ public class LeetCode26 {
         }
         int i;
         int m = nums.length - 1;
+
         for (i = 0; i < m;) {
             if (nums[i] == nums[i + 1]) {
                 for (int j = i + 1; j < nums.length - 1; j++) {
