@@ -19,6 +19,7 @@ public class LeetCode35 {
     public int searchInsert1(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
+        // 如果是查找等于target的元素，去掉等号
         while (left <= right) {
             int middle = (left + right) / 2;
             if (nums[middle] < target) {
