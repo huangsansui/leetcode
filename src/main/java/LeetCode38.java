@@ -13,20 +13,20 @@ public class LeetCode38 {
         }
         String str = countAndSay(n - 1) + "*";
         int count = 1;
-        String s = "";
+        String result = "";
         for (int i = 0; i < str.length() - 1; i++) {
             if (str.charAt(i) == str.charAt(i + 1)) {
                 count++;
             } else {
-                s += String.valueOf(count) + str.charAt(i);
+                result += String.valueOf(count) + str.charAt(i);
                 count = 1;
             }
         }
-        return s;
+        return result;
     }
 
     public static void main(String[] args) {
         LeetCode38 code = new LeetCode38();
-        System.out.println(code.countAndSay(3));
+        System.out.println(code.countAndSay(4));
     }
 }
