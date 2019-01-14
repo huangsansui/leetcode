@@ -27,6 +27,21 @@ public class LeetCode121 {
         return profit;
     }
 
+    /**
+     * Kadane's Algorithm
+     * @param prices
+     * @return
+     */
+    public int maxProfit1(int[] prices) {
+        int maxCur = 0;
+        int maxPro = 0;
+        for (int i = 1; i < prices.length; i++) {
+            maxCur = Math.max(0, maxCur += prices[i] - prices[i - 1]);
+            maxPro = Math.max(maxCur, maxPro);
+        }
+        return maxPro;
+    }
+
     public static void main(String[] args) {
         LeetCode121 code = new LeetCode121();
         int[] prices = new int[]{1,2,4};
