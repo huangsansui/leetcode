@@ -25,3 +25,4 @@ Also it can develop a good habit of solving problems. If you have the same idea,
 | 2019.1.14 |121,122,125,136,141 | yes | 10 |
 | 2019.1.15 |167,168 | yes | 11 |
 | 2019.1.16 |169,171 | yes | 13 |
+| 2019.1.17 |206 | yes | 14 |
