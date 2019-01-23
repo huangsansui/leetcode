@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * Function:
@@ -16,7 +17,7 @@ public class LeetCode290 {
         }
         HashMap map = new HashMap<>();
         for (int i = 0; i < words.length; i++) {
-            if (map.put(pattern.charAt(i), i) != map.put(words[i], i)) {
+            if (!Objects.equals(map.put(pattern.charAt(i), i),map.put(words[i], i))) {
                 return false;
             }
         }
