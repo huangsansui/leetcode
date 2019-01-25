@@ -31,4 +31,4 @@ Also it can develop a good habit of solving problems. If you have the same idea,
 | 2019.1.22 |236,264,268 | yes | 17 |
 | 2019.1.23 |290,326,349 | yes | 18 |
 | 2019.1.24 |344,367,371 | yes | 19 |
-| 2019.1.25 |844,921 | yes | 20 |
+| 2019.1.25 |844,921,389 | yes | 20 |
