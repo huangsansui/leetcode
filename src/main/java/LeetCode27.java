@@ -35,12 +35,6 @@ public class LeetCode27 {
         return k;
     }
 
-    public void swap(int i, int j){
-        int temp = i;
-        i = j;
-        j = temp;
-    }
-
     public static void main(String[] args) {
         LeetCode27 code = new LeetCode27();
         int[] nums = new int[]{3, 2, 2, 3};
