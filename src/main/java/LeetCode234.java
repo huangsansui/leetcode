@@ -10,16 +10,16 @@ import util.ListNode;
 public class LeetCode234 {
 
     public boolean isPalindrome(ListNode head) {
-        ListNode dummyHead = null;
-        ListNode node = head;
-        while (node != null) {
-            ListNode next = node.next;
-            node.next = dummyHead;
-            dummyHead = node;
-            node = next;
+        // 找到中点
+        ListNode head1 = head;
+        ListNode head2 = head;
+        while (head2.next != null && head2.next.next != null) {
+            head1 = head1.next;
+            head2 = head2.next.next;
         }
-        System.out.println(dummyHead);
-        System.out.println(head);
+        // head  1 -> 2 -> 3 -> 4 -> 5 -
+        // head1 3 -> 4 -> 5
+        // head2
         return true;
     }
 
