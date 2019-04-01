@@ -8,6 +8,7 @@
 public class LeetCode27 {
 
     public int removeElement(int[] nums, int val) {
+        // Solution 1
         if (nums == null || nums.length == 0) {
             return 0;
         }
@@ -20,9 +21,29 @@ public class LeetCode27 {
         return rev;
     }
 
+    public int removeElement1(int[] nums, int val) {
+        int k = 0;
+        for (int i = 0 ; i < nums.length ; i++){
+            if (nums[i] != val){
+                if(k != i){
+                    nums[k++] = nums[i];
+                }else{
+                    k++;
+                }
+            }
+        }
+        return k;
+    }
+
+    public void swap(int i, int j){
+        int temp = i;
+        i = j;
+        j = temp;
+    }
+
     public static void main(String[] args) {
         LeetCode27 code = new LeetCode27();
         int[] nums = new int[]{3, 2, 2, 3};
-        System.out.println(code.removeElement(nums, 3));
+        System.out.println(code.removeElement1(nums, 3));
     }
 }
