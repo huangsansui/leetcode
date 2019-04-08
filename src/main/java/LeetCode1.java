@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Function:
  *
@@ -43,6 +46,27 @@ public class LeetCode1 {
                     index[1] = j;
                 }
             }
+        }
+        return index;
+    }
+
+    /**
+     * map
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum2(int[] nums, int target) {
+        int[] index = new int[2];
+        Map<Integer, Integer> map = new HashMap<>(16);
+        for (int i = 0; i < nums.length; i++) {
+            int temp = target - nums[i];
+            if (map.containsKey(temp)) {
+                index[0] = i;
+                index[1] = map.get(temp);
+                return index;
+            }
+            map.put(nums[i], i);
         }
         return index;
     }
