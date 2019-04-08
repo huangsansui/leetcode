@@ -1,5 +1,7 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Function:
@@ -23,19 +25,17 @@ public class LeetCode3 {
 //        }
 
 
-        Map<Character, Integer> map =new HashMap<>();
+        Set<Character> set =new HashSet<>();
         int l = 0;
-        int r = -1;
+        int r = 0;
         int res = 0;
-        while (l < s.length()) {
-            if (r + 1 < s.length() && !map.containsKey(s.charAt(r + 1))) {
-                r++;
-                map.put(s.charAt(r), r);
+        while (l < s.length() && r < s.length()) {
+            if (!set.contains(s.charAt(r))) {
+                set.add(s.charAt(r++));
+                res = Math.max(res, r - l);
             } else {
-                l = map.get(s.charAt(r + 1));
-                l++;
+                set.remove(s.charAt(l++));
             }
-            res = Math.max(res, r - l + 1);
         }
         return res;
     }
