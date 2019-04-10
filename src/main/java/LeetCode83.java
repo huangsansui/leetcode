@@ -21,6 +21,19 @@ public class LeetCode83 {
         return headNode;
     }
 
+
+    public ListNode deleteDuplicates1(ListNode head) {
+        ListNode res = head;
+        while (head != null && head.next != null) {
+            if (head.next.val == head.val) {
+                head.next = head.next.next;
+                continue;
+            }
+            head = head.next;
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         LeetCode83 code83 = new LeetCode83();
         ListNode node = new ListNode(1);
