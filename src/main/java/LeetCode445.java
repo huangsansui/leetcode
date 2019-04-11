@@ -41,23 +41,30 @@ public class LeetCode445 {
         }
         while (!q1.isEmpty()) {
             int num = q1.pop();
-            if (num + count >= 10) {
+            int sum = num + count;
+            if (sum >= 10) {
                 count = 1;
-                num %= 10;
-                ret.add(num);
+                sum %= 10;
+                ret.add(sum);
             } else {
-                ret.add(num + count);
+                ret.add(sum);
+                count = 0;
             }
         }
         while (!q2.isEmpty()) {
             int num = q2.pop();
-            if (num + count >= 10) {
+            int sum = num + count;
+            if (sum >= 10) {
                 count = 1;
-                num %= 10;
-                ret.add(num);
+                sum %= 10;
+                ret.add(sum);
             } else {
-                ret.add(num + count);
+                ret.add(sum);
+                count = 0;
             }
+        }
+        if (count == 1) {
+            ret.add(1);
         }
         ListNode res = new ListNode(0);
         ListNode pre = res;
@@ -70,18 +77,18 @@ public class LeetCode445 {
 
     public static void main(String[] args) {
         LeetCode445 code = new LeetCode445();
-        ListNode l1 = new ListNode(7);
-        ListNode l11 = new ListNode(2);
-        ListNode l111 = new ListNode(4);
-        ListNode l1111 = new ListNode(3);
-        l1.next = l11;
-        l11.next = l111;
-        l111.next = l1111;
-        ListNode l2 = new ListNode(5);
-        ListNode l22 = new ListNode(6);
-        ListNode l222 = new ListNode(4);
+        ListNode l1 = new ListNode(1);
+//        ListNode l11 = new ListNode(2);
+//        ListNode l111 = new ListNode(4);
+//        ListNode l1111 = new ListNode(3);
+//        l1.next = l11;
+//        l11.next = l111;
+//        l111.next = l1111;
+        ListNode l2 = new ListNode(9);
+        ListNode l22 = new ListNode(9);
+//        ListNode l222 = new ListNode(4);
         l2.next = l22;
-        l22.next = l222;
+//        l22.next = l222;
         ListNode result = code.addTwoNumbers(l1, l2);
     }
 }
