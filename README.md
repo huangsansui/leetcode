@@ -1,15 +1,15 @@
-#LeetCode
+# LeetCode
 
-##Introduction
+## Introduction
 
 This repository is used to record the process of solving problems in [LeetCode](https://leetcode.com). 
 As we all known,Learning outcomes with hysteresis, the record can show learning result intuitively to me. 
 Also it can develop a good habit of solving problems. If you have the same idea, join me!
 
-##Contact
+## Contact
 [Huangsansui's LeetCode](https://leetcode.com/huangsansui/)
 
-##CheckList
+## CheckList
 
 | Date      | Problems   | Checked   |  Day     |
 | :------:  | :------:   | :------:  |  :------:|
