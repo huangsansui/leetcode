@@ -18,7 +18,6 @@ public class LeetCode226 {
         root.right = temp;
         invertTree(root.left);
         invertTree(root.right);
-
         return root;
     }
 

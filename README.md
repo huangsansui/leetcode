@@ -25,6 +25,7 @@ Also it can develop a good habit of solving problems. If you have the same idea,
 | 2019.1.14 |121,122,125,136,141 | yes | 10 |
 | 2019.1.15 |167,168 | yes | 11 |
 | 2019.1.16 |169,171 | yes | 13 |
+| 2019.1.16 |169,171 | yes | 13 |
 | 2019.1.17 |206,202,203 | yes | 14 |
 | 2019.1.18 |2,3 | yes | 15 |
 | 2019.1.21 |11,15,217,219 | yes | 16 |
@@ -36,4 +37,4 @@ Also it can develop a good habit of solving problems. If you have the same idea,
 | 2019.1.29 |404,429 | yes | 22 |
 | 2019.1.30 |448, 485 | yes | 23 |
 | 2019.5.6 |155,160 | yes | 24 |
-| 2019.5.7 |198 | yes | 25 |
+| 2019.5.7 |198,226,234 | yes | 25 |

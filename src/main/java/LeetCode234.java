@@ -10,21 +10,38 @@ import util.ListNode;
 public class LeetCode234 {
 
     public boolean isPalindrome(ListNode head) {
-        // 找到中点
-        ListNode head1 = head;
-        ListNode head2 = head;
-        while (head2.next != null && head2.next.next != null) {
-            head1 = head1.next;
-            head2 = head2.next.next;
+        if (head == null) {
+            return true;
         }
-        // head  1 -> 2 -> 3 -> 4 -> 5 -
-        // head1 3 -> 4 -> 5
-        // head2
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        if (fast != null) {
+            slow = slow.next;
+        }
+        ListNode dummyHead = null;
+        while (slow != null) {
+            ListNode next = slow.next;
+            slow.next = dummyHead;
+            dummyHead = slow;
+            slow = next;
+        }
+        fast = head;
+        while (dummyHead != null) {
+            if (dummyHead.val != fast.val) {
+                return false;
+            }
+            dummyHead = dummyHead.next;
+            fast = fast.next;
+        }
         return true;
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3};
-        (new LeetCode234()).isPalindrome(new ListNode(nums));
+        int[] nums = {1,2};
+        System.out.println((new LeetCode234()).isPalindrome(new ListNode(nums)));
     }
 }
