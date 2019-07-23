@@ -22,4 +22,20 @@ public class LeetCode78 {
         }
         return result;
     }
+
+    public List<List<Integer>> subsets1(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
+        backTrack(nums, 0, list, result);
+        return result;
+    }
+
+    private void backTrack(int[] nums, int i, List<Integer> list, List<List<Integer>> result) {
+        result.add(new ArrayList<>(list));
+        for (int j = i; j < nums.length; j++) {
+            list.add(nums[j]);
+            backTrack(nums, j + 1, list, result);
+            list.remove(list.size() - 1);
+        }
+    }
 }
