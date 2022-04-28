@@ -42,6 +42,45 @@ public class LeetCode21 {
         return headNode.next;
     }
 
+    public ListNode mergeTwoLists2(ListNode list1, ListNode list2) {
+        ListNode res = new ListNode(-1);
+        ListNode pre = res;
+        while (list1 != null && list2 != null) {
+            if (list1.val < list2.val) {
+                res.next = list1;
+                list1 = list1.next;
+            } else {
+                res.next = list2;
+                list2 = list2.next;
+            }
+            res = res.next;
+        }
+        if (list1 != null) {
+            res.next = list1;
+        }
+        if (list2 != null) {
+            res.next = list2;
+        }
+        return pre.next;
+    }
+
+    public ListNode mergeTwoLists3(ListNode list1, ListNode list2) {
+        if (list1 == null) {
+            return list2;
+        }
+        if (list2 == null) {
+            return list1;
+        }
+        if (list1.val < list2.val) {
+            list1.next = mergeTwoLists(list1.next, list2);
+            return list1;
+        } else {
+            list2.next = mergeTwoLists(list1, list2.next);
+            return list2;
+        }
+
+    }
+
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
         l1.next = new ListNode(2);
