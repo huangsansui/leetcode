@@ -28,6 +28,23 @@ public class LeetCode70 {
         return a;
     }
 
+    public int climbStairs2(int n) {
+        if (n == 1 || n == 2) {
+            return n;
+        }
+        int sum = 0;
+        int pre = 1;
+        int cur = 2;
+        int i = 3;
+        while (i <= n) {
+            sum += pre + cur;
+            pre = cur;
+            cur = sum;
+            i++;
+        }
+        return sum;
+    }
+
     public static void main(String[] args) {
         LeetCode70 code = new LeetCode70();
         System.out.println(code.climbStairs(4));
